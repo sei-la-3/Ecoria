@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Ecoria Acesse sua conta</title>
+<link rel="stylesheet" href="css/acesso.css">
+</head>
+<body>
+<main>
+
+  <header>
+    <h1><img src="img/logo_Ecoria.png" alt="Logo do Ecoria"></h1>
+    <nav>
+      <ul>
+        <li><a href="#"> <img src="img/casa2.png" alt="Ícone de casa" style="width: 64px; height: 34px;"> Página inicial</a></li>
+        <li><a href="#"> <img src="img/livro.png" alt="Ícone de livro" style="width:  64px; height: 34px;"> Histórico</a></li>
+        <li><a href="#"><img src="img/prancheta2.png" alt="Ícone de prancheta" style="width: 64px; height: 34px;"> Outros números</a></li>
+        <li><a href="#"><img src="img/balao.png" alt="Ícone de balão de fala" style="width: 64px; height: 34px;"> Ajuda</a></li>
+        <li><hr></li>
+        <li><button class="btn-login"> <img src="img/avatar.png" alt="Ícone de usuário" style="width: 64px; height: 34px;"> Logar ou criar conta</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="boas-vindas">
+    <article>
+      <h2>Bem vindo de volta ao Ecoria</h2>
+      <p>Sua voz faz a diferença. Denuncie, acompanhe e ajude a construir um ambiente melhor para todos.</p>
+      <figure>
+        <figcaption><img src="img/img_login.png" alt="Ilustração da Terra"></figcaption>
+      </figure>
+    </article>
+
+    <aside>
+      <span><img src="img/folha.png" alt="Ícone de folha" style="width: 94px; height: 44px;"></span>
+      <h2>Acesse sua conta</h2>
+
+      <form>
+        <fieldset>
+          <label>
+            <span><img src="img/avatar.png" alt="Ícone de usuário" style="width: 64px; height: 34px;"> </span>
+            <input type="text" placeholder="Digite seu gmail ou usuário..." required>
+          </label>
+
+          <label>
+            <span><img src="img/cadeado.png" alt="Ícone de cadeado" style="width: 64px; height: 34px;"></span>
+            <input type="password" id="senha" placeholder="Digite sua senha..." required>
+            <button type="button" class="toggle-eye" onclick="toggleSenha()"><img src="img/olho.png" alt="mostrar_o_caralho_da_senha" style="width: 54px; height: 34px;"></button>
+          </label>
+        </fieldset>
+
+        <a class="forgot" href="#">Esqueci a senha</a>
+
+        <button type="submit" class="btn-entrar">Entrar</button>
+      </form>
+
+      <hr>
+
+      <p class="signup-row">
+        <span>Não tem conta?</span>
+        <button class="btn-criar" type="button">Criar conta</button>
+      </p>
+    </aside>
+  </section>
+
+  <footer>
+    <h3>Ecoria</h3>
+    <p>
+        todos direitos reservados © 2026
+    </p>
+    <hr>
+  </footer>
+
+</main>
+
+<script>
+function toggleSenha(){
+  const campo = document.getElementById('senha');
+  campo.type = campo.type === 'password' ? 'text' : 'password';
+}
+</script>
+</body>
+</html>
