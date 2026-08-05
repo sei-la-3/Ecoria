@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Denunciar - Ecoria</title>
+    <link rel="stylesheet" href="css/como_denunciar.css">
+</head>
+<body>
+
+  <header>
+    <h1><img src="img/logo_Ecoria.png" alt="Logo do Ecoria"></h1>
+    <nav>
+      <ul>
+        <li><a href="#"> <img src="img/casa2.png" alt="Ícone de casa" style="width: 64px; height: 34px;"> Página inicial</a></li>
+        <li><a href="#"> <img src="img/livro.png" alt="Ícone de livro" style="width: 64px; height: 34px;"> Histórico</a></li>
+        <li><a href="#"><img src="img/prancheta2.png" alt="Ícone de prancheta" style="width: 64px; height: 34px;"> Outros números</a></li>
+        <li><a href="como-denunciar.html"><img src="img/balao.png" alt="Ícone de balão de fala" style="width: 64px; height: 34px;"> Ajuda</a></li>
+        <li><hr></li>
+        <li><button class="btn-login" onclick="window.location.href='acesso.html'"> <img src="img/avatar.png" alt="Ícone de usuário" style="width: 64px; height: 34px;">Logar ou criar conta</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container-denunciar">
+      <div class="conteudo-passos">
+        
+        <article class="linha-passo">
+            <span class="texto-passo">primeiro passo</span>
+            <span class="traco-conector" aria-hidden="true"></span>
+            <button type="button" class="card-imagem-apoio" onclick="abrirModal('Primeiro Passo', 'Para iniciar a sua denúncia, tire fotos ou grave um vídeo claro do local do incidente ecológico. Certifique-se de registrar pontos de referência para facilitar a localização pelas autoridades.', 'img/passo1.png')">
+                Clique aqui para ver o primeiro passo
+            </button>
+        </article>
+
+        <article class="linha-passo">
+            <span class="texto-passo">segundo passo</span>
+            <span class="traco-conector" aria-hidden="true"></span>
+            <button type="button" class="card-imagem-apoio" onclick="abrirModal('Segundo Passo', 'Preencha o formulário detalhando o ocorrido: selecione o tipo de infração ambiental, descreva a situação e anexe a foto gravada no primeiro passo.', 'img/passo2.png')">
+                clique aqui para ver como preencher o formulário
+            </button>
+        </article>
+
+        <article class="linha-passo">
+            <span class="texto-passo">como criar conta</span>
+            <span class="traco-conector" aria-hidden="true"></span>
+            <button type="button" class="card-imagem-apoio" onclick="abrirModal('Como Criar Conta', 'Clique no botão verde no topo do site (Logar ou criar conta), insira seu e-mail, crie uma senha segura e confirme o link que será enviado no seu e-mail para ativar seu cadastro.', 'img/passo3.png')">
+                Clique aqui para ver como criar conta
+            </button>
+        </article>
+
+      </div>
+    </section>
+
+    <div id="modalTexto" class="modal" onclick="fecharModalFora(event)" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+        <div class="modal-content">
+            <button type="button" class="fechar-modal" onclick="fecharModal()" aria-label="Fechar janela">&times;</button>
+            <h3 id="modalTitulo">Título</h3>
+            <div class="modal-body">
+                <p id="modalDescricao">Texto explicativo aqui...</p>
+                <img id="modalImagem" src="" alt="Imagem explicativa do passo">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function abrirModal(titulo, texto, caminhoImagem) {
+            document.getElementById('modalTitulo').innerText = titulo;
+            document.getElementById('modalDescricao').innerText = texto;
+
+            const imgElement = document.getElementById('modalImagem');
+            if (caminhoImagem) {
+                imgElement.src = caminhoImagem;
+                imgElement.style.display = 'block';
+            } else {
+                imgElement.style.display = 'none';
+            }
+
+            document.getElementById('modalTexto').style.display = 'flex';
+        }
+
+        function fecharModal() {
+            document.getElementById('modalTexto').style.display = 'none';
+        }
+
+        function fecharModalFora(event) {
+            if (event.target === document.getElementById('modalTexto')) {
+                fecharModal();
+            }
+        }
+    </script>
+  </main>
+
+  <footer>
+    <h3>Ecoria</h3>
+    <p>todos direitos reservados © 2026</p>
+    <hr>
+  </footer>
+
+</body>
+</html>
