@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Criação de Conta</title>
+    <link rel="stylesheet" href="css/criar_conta.css">
+</head>
+<body>
+    <main>
+  <header>
+    <h1><img src="img/logo_Ecoria.png" alt="Logo do Ecoria"></h1>
+    <nav>
+      <ul>
+        <li><a href="#"> <img src="img/casa2.png" alt="Ícone de casa" style="width: 54px; height: 34px;"> Página inicial</a></li>
+        <li><a href="#"> <img src="img/livro.png" alt="Ícone de livro" style="width:  54px; height: 34px;"> Histórico</a></li>
+        <li><a href="#"><img src="img/prancheta2.png" alt="Ícone de prancheta" style="width: 54px; height: 34px;"> Outros números</a></li>
+        <li><a href="como-denunciar.html"><img src="img/balao.png" alt="Ícone de balão de fala" style="width: 54px; height: 34px;"> Ajuda</a></li>
+         <li><a href="sobre-nos.html"><img src="img/Sobre_nos.png" alt="Ícone de pessoas" style="width: 54px; height: 34px;"> Sobre o Ecoria</a></li>
+        <li><hr></li>
+        <li><button class="btn-login"  onclick="window.location.href='acesso.html'"> <img src="img/avatar.png" alt="Ícone de usuário" style="width: 64px; height: 34px;">Logar ou criar conta</button></li>
+      </ul>
+    </nav>
+  </header>
+        
+        <!-- eu simplismente desisiti, muito trampo -->
+        <section class="acesso" style="background-image: url('img/desisto.png'); background-size: cover; background-position: center; position: relative;">
+    <form action="#" method="post">
+        <p>
+            <img src="img/gmail verde.png" alt="" class="icone-campo" style="width: 64px; height: 34px;">
+            <label for="gmail">Gmail</label>
+            <input type="email" id="gmail" name="gmail" placeholder="Digite seu gmail" required>
+        </p>
+
+        <p>
+            <img src="img/entrar_avatar_verde.png" alt="" class="icone-campo" style="width: 64px; height: 34px;">
+            <label for="usuario">Usuário</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Crie seu usuário" required>
+        </p>
+
+        <p>
+            <img src="img/cadeado_verde.png" alt="" class="icone-campo" style="width: 64px; height: 34px;">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha..." required>
+            <button type="button" class="ver-senha" aria-label="Mostrar senha">
+                <img src="img/olho.png" alt="" style="width: 54px; height: 34px;">
+            </button>
+        </p>
+
+        <p>
+            <img src="img/verficação.png" alt="" class="icone-campo" style="width: 44px; height: 54px;">
+            <label for="confirmar-senha">Confirmar senha</label>
+            <input type="password" id="confirmar-senha" name="confirmar_senha" placeholder="Confirme a sua senha" required>
+            <button type="button" class="ver-senha" aria-label="Mostrar senha">
+                <img src="img/olho.png" alt=""style="width: 54px; height: 34px;">
+            </button>
+        </p>
+
+        <hr>
+
+        <button type="submit" class="btn-criar">Criar conta</button>
+        <a href="acesso.html" class="link-login">Caso já tenha uma conta,<br>clique aqui</a>
+    </form>
+</section>
+    
+  <footer>
+    <h3>Ecoria</h3>
+    <p>
+        todos direitos reservados © 2026
+    </p>
+    <hr>
+  </footer>
+    </main>
+    <script>
+function toggleSenha(){
+  const campo = document.getElementById('senha');
+  campo.type = campo.type === 'password' ? 'text' : 'password';
+}
+</script>
+</body>
+</html>
